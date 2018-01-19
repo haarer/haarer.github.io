@@ -111,5 +111,6 @@ cubietruck2 pin |name                |lcd pin   |cable color
 
 # Yess !
 The result on my bench.
-![it works](20151129_011426.jpg)
+![it works](20151129_011426.jpg?raw=true)
+
 
