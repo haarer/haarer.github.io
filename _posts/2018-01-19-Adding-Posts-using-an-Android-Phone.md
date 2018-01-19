@@ -19,4 +19,9 @@ This sounds all very nice but there are some problems
 * there is no markdown support in the app.
 * there is no support for images in the app - this would be very nice to take photos using the smartphone and put them into the post from the smart phone.
 
-After all Mr.Hyde is a very clever idea. It has developed quite far and with some work it could be a real killer app. Taking Photos and embedding them would bring the App much forward. I also believe that the dependency to an external preview server should be removed, but this would require a ruby/jekyll stack on the phone. This should be possible.
+# Improvements
+After all Mr.Hyde is a very clever idea. It has developed quite far and with some work it could be a real killer app. 
+
+* Taking Photos and embedding them would bring the App much forward.
+
+* I also believe that the dependency to an external preview server should be removed. This would require a ruby/jekyll stack on the phone. This is possible, [one way to do it, is using termux](https://github.com/hastebrot/hastebrot.github.io/blob/master/_drafts/lets-setup-jekyll-on-termux.md). Maybe it is possible to package a specialized termux variant which contains only what is necessary for a jekyll build. In principle one could try to run the server part of mr.hyde inside termux. (Ther server is made in python).
