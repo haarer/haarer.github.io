@@ -19,17 +19,16 @@ I wanted to connect a LVDS LCD Panel directly to my cubieboard - not using an HD
 * https://linux-sunxi.org/Fex_Guide#disp_init_configuration
 * http://tinyvga.com/vga-timing/800x600@60Hz
 
-
 # How i did it
 
-First the the fex configuration must be changed
+First i changed the fex configuration
 
-* the boot partition must be mounted:
+* mount the boot partition:
 `mount /dev/nanda /mnt/`
 
 * the binary device configuration must be converted to human readable form `bin2fex /mnt/script.bin /root/1.fex`
 
-* edit fex file (see below)
+* edit fex file (see content below)
 
 Content to add to fex file:
 
@@ -80,9 +79,9 @@ Content to add to fex file:
 
 * convert the fex file back to binary `fex2bin /root/1.fex /mnt/script.bin`
 
-* unmount `umount /mnt/`
+* unmount boot partition `umount /mnt/`
 
-* change uEnv.txt as follows, to make the cubieboard use the other output
+* change uEnv.txt as follows, to make the cubieboard use the other output.
 
 Content of uEnv.txt
 
@@ -92,7 +91,9 @@ Content of uEnv.txt
 
 * wire the panel
 
-Panel Wiring
+Panel Connections
+
+The following table shows the connection of panel signals to the cubieboard. Additionally, there are connections for power supply of the panel and the panels backlight.
 
 cubietruck2 pin |name                |lcd pin   |cable color
 ----------------|--------------------|----------|-----------
@@ -108,6 +109,7 @@ cubietruck2 pin |name                |lcd pin   |cable color
 04              |PD1 (LCDD1/LVDS0N0) |16 (RX0-) |green-white
  
 
-# Yess ! 
-![it works](_posts/20151129_011426.jpg)
+# Yess !
+The result on my bench.
+![it works](20151129_011426.jpg)
 
