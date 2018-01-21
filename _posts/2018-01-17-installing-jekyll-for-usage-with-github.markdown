@@ -13,13 +13,13 @@ Jekyll depends on ruby - but this should not stop me using it. I havn't written 
 The first attempt was to use [MSYS2](http://www.msys2.org/), which i like very much. I use it for my [cross toolchain project](https://github.com/haarer/toolchain68k). The Jekyll installation in MSYS2 did'nt work well.
 
 The installation of ruby was no problem, but it turned out that the jekyll gem didnt build:
-
-    In file included from C:/tools/msys64/usr/include/ruby-2.3.0/ruby/ruby.h:36:0,
-                 from C:/tools/msys64/usr/include/ruby-2.3.0/ruby.h:33,
-                 from ruby_http_parser.c:1:
-    C:/tools/msys64/usr/include/ruby-2.3.0/ruby/defines.h:61:25: fatal error: sys/select.h: No such file or directory
-    # include <sys/select.h>
-
+```
+In file included from C:/tools/msys64/usr/include/ruby-2.3.0/ruby/ruby.h:36:0,
+             from C:/tools/msys64/usr/include/ruby-2.3.0/ruby.h:33,
+             from ruby_http_parser.c:1:
+C:/tools/msys64/usr/include/ruby-2.3.0/ruby/defines.h:61:25: fatal error: sys/select.h: No such file or directory
+# include <sys/select.h>
+```
 The build process seems to confuse the MSYS platform with a Cygwin-ish environment - a similar error is reported [here](https://github.com/flori/json/issues/324). I did not find a quick solution.
 
 So i decided to install Jekyll using Chocolatey. 
@@ -27,7 +27,8 @@ So i decided to install Jekyll using Chocolatey.
 
 I've never used Chocolatey but i like the idea to have one single interface to the different installation sources for packages. 
 
-Jens Willmer has written how to install Jekyll from Chokolatey on his [blog](https://jwillmer.de/blog/tutorial/how-to-install-jekyll-and-pages-gem-on-windows-10-x46). I followed the steps but it turned out that there is a dependency problem between ffi (required by Jekyll)  and the current ruby version 2.5.
+Jens Willmer has written how to install Jekyll from Chokolatey on his [blog](https://jwillmer.de/blog/tutorial/how-to-install-jekyll-and-pages-gem-on-windows-10-x46).
+I followed the steps but it turned out that there is a dependency problem between ffi (required by Jekyll)  and the current ruby version 2.5.
 The ffi gem wants a ruby version below 2.5
 
 This can be fixed by setting a specific ruby version , e.g. `choco install ruby --version 2.4.3.1`
@@ -44,28 +45,32 @@ After all, most of the previous steps were misleading, or unneccesary. A much si
 After stumbling around with the Jekyll installation, i learned what is really needed.
 It boils dowm to following steps:
 
-* install chocolatey `@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
+* install chocolatey
+```
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```    
 * In an admin powershell install ruby using chocolatey `choco install ruby --version 2.4.3.1`
 * In a user powershell go to the github root dir and do `gem install bundle`
 * Create an initial Gemfile in the <username>github.io repo root directory 
-
-    source "https://rubygems.org"
-    gem "github-pages", group: :jekyll_plugins
-    gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+```
+source "https://rubygems.org"
+gem "github-pages", group: :jekyll_plugins
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+```
 * In the powershell do a `bundle update`. This pulls in the proper jekyll version.
 * Create the initial page by `jekyll new . -f`.  This overwrites the gemfile, so you need to remove the line requiring the jekyll version in the newly generated file. This is how the gem file should look like.
-
-    source "https://rubygems.org" 
-    gem "github-pages", group: :jekyll_plugins
-    # If you have any plugins, put them here!
-    group :jekyll_plugins do
-        gem "jekyll-feed", "~> 0.6"
-    end
-    # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-    gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-    # add this to autoupdate on changes 
-    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+```
+source "https://rubygems.org"
+gem "github-pages", group: :jekyll_plugins
+# If you have any plugins, put them here!
+group :jekyll_plugins do
+    gem "jekyll-feed", "~> 0.6"
+end
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# add this to autoupdate on changes 
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+```
 * Serve the page `bundle exec jekyll serve`
 * Now you can edit your pages, configure the site in the _config.yml file and so on
 
