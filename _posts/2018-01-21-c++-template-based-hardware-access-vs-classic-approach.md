@@ -31,7 +31,6 @@ They are quite easy to program, one can create a program which blinks a LED with
 The code for an AVR based Arduino or an Expressif ESP32 is exactly the same, the HAL hides the different hardware architectures. 
 
 # HAL costs
-
 Unfortunatly there is a price, and it may be too high. This depends on on the implementation of the HAL
 * the total size of the code may increase, because the HAL contains functions or implementations which are not used in the application
 * the latency of i/o manipulation may be worse to "bare metal code" (this is platform specific code)
@@ -39,7 +38,6 @@ Unfortunatly there is a price, and it may be too high. This depends on on the im
 * the API design of the HAL may not match the applications needs
 
 # me and the Arduino HAL
-
 In one of my hobby development projects i thougt: Hey, why not use an Arduino for it ? 
 * they're cheap
 * i wanted to use an AVR processor anyway
@@ -64,7 +62,7 @@ This is a tiny program with a trivial functionality.
 It waits until a bit 6 of port b goes high (pin 12 on an arduino mega). Then it goes into a loop, toggling bit 7 of port b(this is pin 13 on an arduino mega, which is connected to the onboard led)
 The program directly accesses the ports. No HAL at all.
 
-```
+```c++
 #include <avr/io.h>
 #include <util/delay.h>
 
@@ -87,8 +85,8 @@ int main(void)
 ```
 
 The second program uses a class template which is parametrized by an uint8 - the pin number. 
-
-```
+'note that the program sets the output direction always to out. this is to make it comparable to the classic version.'
+```c++
 #include <avr/io.h>
 #include <util/delay.h>
 
@@ -162,13 +160,12 @@ int main(void)
 The main program is much more readable, and changing the pins requires only the change of the pin number (provided, that the IOPin class has definitions for that pin number).
 It is also immediately clear, that the code in main() has no AVR specific aspects. They are all encapsulated in the IOPin class
 
-But uuuuuhhhhh - the code bloat.. and oooooohhhh - it will be slow. 
+*But..  uuuuuhhhhh - the code bloat.. and oooooohhhh - it will be slow.* 
 
 No, its not bloated, and no its not slow.
 Lets compare the code sizes !
 
-
-Classic version
+*Classic version*
 ```
 ~/toolchain68k/examples/avr-cpp-example$ make size
 avr-size main.o  avr-test.elf
@@ -190,10 +187,9 @@ section                      size       addr
 .debug_line                  0x1d        0x0
 .debug_str                  0x3e6        0x0
 Total                      0x30ba
-
 ```
 
-Template version
+*Template version*
 ```
 ~/toolchain68k/examples/avr-cpp-example$ make size
 avr-size main.o  avr-test.elf
@@ -223,16 +219,16 @@ What's this ? The sizes are the same ? Is this a copy and paste error ? :)
 No. The total size of the ELF files differs ($30ba vs $343c) but diffing the hex files reveals that the generated code is exactly the same in the classic and in the template version. 
 
 I'll try to explain why:
-The reason for all this is, that templates are evaluated at compile time. That means, the constant pin number value passed to the template results in a compile time constant switch expression which the compiler simpifies to the content of the selected case.
-The next step is, that the compiler inlines the code in the called function of the IOPin class.
+* Templates are evaluated at compile time. That means, the constant pin number value passed to the template results in a compile time constant switch expression
+* The compile time constant switch expression is simpified by the compiler to the content of the selected case.
+* The compiler inlines the code in the called function of the IOPin class.
 
 Basically, the compiler throws away nearly everything from the HAL class that isnt needed, and leaves only the code that one would have written by hand. 
-
 
 A look into the lss file of the template version shows the efficiency of this optimization - it generates two assembler statements
 for the `while(0== testpin.State())` loop:
 
-Template version
+*Template version*
 ```
 00000100 <main>:
         {
@@ -253,6 +249,7 @@ Template version
 ``` 
 
 The classic implementation isn't any bit better:
+*Classic version*
 ``` 
 00000100 <main>:
 
@@ -269,7 +266,7 @@ int main(void)
  
 ``` 
 
-The code and a Makefile is in the examples subdirectory of my [toolchain project](http://github.com/haarer/toolchain68k).
+The code and a Makefile is in the examples/avr-cpp-example subdirectory of my [toolchain project](http://github.com/haarer/toolchain68k).
  
 
 
