@@ -71,7 +71,7 @@ int main(void)
 {
         DDRB |= (1<<7);
 
-        while(  (  ( PORTB & (1<<6) ) !=(1<<6) ) )
+        while(  (  ( PINB & (1<<6) ) !=(1<<6) ) )
                 ;
 
         while(1)
@@ -128,9 +128,9 @@ class IOPin
         {
                 switch(PinNo)
                 {
-                        case  2: return (PORTE & (1<<4) ) == (1<<4); break;
-                        case 12: return (PORTB & (1<<6) ) == (1<<6); break;
-                        case 13: return (PORTB & (1<<7) ) == (1<<7); break;
+                        case  2: return (PINE & (1<<4) ) == (1<<4); break;
+                        case 12: return (PINB & (1<<6) ) == (1<<6); break;
+                        case 13: return (PINB & (1<<7) ) == (1<<7); break;
                 }
         }
 };
@@ -167,11 +167,11 @@ Lets compare the code sizes !
 
 *Classic version*
 ```
-~/toolchain68k/examples/avr-cpp-example$ make size
+$ make size
 avr-size main.o  avr-test.elf
-   text	   data	    bss	    dec	    hex	filename
-     48	      0	      0	     48	     30	main.o
-    308	      0	      0	    308	    134	avr-test.elf
+   text    data     bss     dec     hex filename
+     48       0       0      48      30 main.o
+    308       0       0     308     134 avr-test.elf
 
 avr-size -Ax avr-test.elf
 avr-test.elf  :
@@ -179,23 +179,23 @@ section                      size       addr
 .data                         0x0   0x800200
 .text                       0x134        0x0
 .stab                       0x5dc        0x0
-.stabstr                    0xe80        0x0
+.stabstr                    0xead        0x0
 .comment                     0x11        0x0
 .note.gnu.avr.deviceinfo     0x40        0x0
 .debug_info                 0xbbc        0x0
 .debug_abbrev               0xb1a        0x0
 .debug_line                  0x1d        0x0
 .debug_str                  0x3e6        0x0
-Total                      0x30ba
+Total                      0x30e7
 ```
 
 *Template version*
 ```
-~/toolchain68k/examples/avr-cpp-example$ make size
+$ make size
 avr-size main.o  avr-test.elf
-   text	   data	    bss	    dec	    hex	filename
-     48	      0	      0	     48	     30	main.o
-    308	      0	      0	    308	    134	avr-test.elf
+   text    data     bss     dec     hex filename
+     48       0       0      48      30 main.o
+    308       0       0     308     134 avr-test.elf
 
 avr-size -Ax avr-test.elf
 avr-test.elf  :
@@ -203,20 +203,19 @@ section                      size       addr
 .data                         0x0   0x800200
 .text                       0x134        0x0
 .stab                       0x60c        0x0
-.stabstr                   0x11d2        0x0
+.stabstr                   0x11ff        0x0
 .comment                     0x11        0x0
 .note.gnu.avr.deviceinfo     0x40        0x0
 .debug_info                 0xbbc        0x0
 .debug_abbrev               0xb1a        0x0
 .debug_line                  0x1d        0x0
 .debug_str                  0x3e6        0x0
-Total                      0x343c
-
+Total                      0x3469
 ```
 
 What's this ? The sizes are the same ? Is this a copy and paste error ? :) 
 
-No. The total size of the ELF files differs ($30ba vs $343c) but diffing the hex files reveals that the generated code is exactly the same in the classic and in the template version. 
+No. The total size of the ELF files differs ($30e7 vs $3469) but diffing the hex files reveals that the generated code is exactly the same in the classic and in the template version. 
 
 I'll try to explain why:
 * Templates are evaluated at compile time. That means, the constant pin number value passed to the template results in a compile time constant switch expression
@@ -235,8 +234,8 @@ for the `while(0== testpin.State())` loop:
                 switch(PinNo)
                 {
                         case  2: DDRE |= (1<<4); break; // pin  2 is PE 4 on arduino mega
-                        case 12: DDRB |= (1<<6); break; // pin 12 is PB 6 on arduino mega 
-                        case 13: DDRB |= (1<<7); break; // pin 13 is PB 7 on arduino mega 
+                        case 12: DDRB |= (1<<6); break; // pin 12 is PB 6 on arduino mega
+                        case 13: DDRB |= (1<<7); break; // pin 13 is PB 7 on arduino mega
  100:   27 9a           sbi     0x04, 7 ; 4
 #ifdef TEMPLATEBASED
         IOPin<13> ledpin;
@@ -244,7 +243,7 @@ for the `while(0== testpin.State())` loop:
         ledpin.SetDir(out);
 
         while(0 == testpin.State())
- 102:   2e 9b           sbis    0x05, 6 ; 5
+ 102:   1e 9b           sbis    0x03, 6 ; 3
  104:   fe cf           rjmp    .-4             ; 0x102 <main+0x2>
 ``` 
 
@@ -260,10 +259,9 @@ int main(void)
         DDRB |= (1<<7);
  100:   27 9a           sbi     0x04, 7 ; 4
 
-        while(  (  ( PORTB & (1<<6) ) !=(1<<6) ) )
- 102:   2e 9b           sbis    0x05, 6 ; 5
+        while(  (  ( PINB & (1<<6) ) !=(1<<6) ) )
+ 102:   1e 9b           sbis    0x03, 6 ; 3
  104:   fe cf           rjmp    .-4             ; 0x102 <main+0x2>
- 
 ``` 
 
 The code and a Makefile is in the examples/avr-cpp-example subdirectory of my [toolchain project](http://github.com/haarer/toolchain68k).
