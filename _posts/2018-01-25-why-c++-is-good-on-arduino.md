@@ -5,14 +5,14 @@ I've been using c++ for quite a while in a home automation project. It made the 
 
 **What doesn't work**
 
-The avr runtime does not support exceptions nor dynamic memory allocation, as has been stated. [you can provide an implementation  though][1].I didnt need it.
+The avr runtime does not support exceptions nor dynamic memory allocation, [as has been stated][6]. You can [provide an implementation  though][1].I didnt need it.
 
-But there is much of C++ left to make use of. Here are some examples
+But there is much of C++ left to make use of. Here are some examples:
 
 **Templates**
 
-They are very useful because, e.g. they allow to move work from runtime to compiletime. I use templates for a [replacement of the Arduino HAL functions DigitalWrite and others, without the runtime and code bloat][2]. 
-The template based version is much more readable, and generates exactly the same assembler code. Please find the details in the other post.
+They are very useful because, e.g. they allow to move work from runtime to compiletime. I use templates for a replacement of the Arduino HAL functions DigitalWrite and others, without the runtime and code bloat. 
+The template based version is much more readable, and generates exactly the same assembler code. Please find a showcase in [the other post.][2]
 
 **More on templates**
 
@@ -115,3 +115,4 @@ My conclusion is, there is no excuse using c, except you havn't yet learned c++.
   [3]: https://github.com/haarer/toolchain68k
   [4]: http://en.cppreference.com/w/cpp/language/auto
   [5]: https://arduino.stackexchange.com/questions/49098/how-can-arduinos-8-bit-microcontrollers-handle-c/49113#49113
+  [6]: http://www.nongnu.org/avr-libc/user-manual/FAQ.html#faq_cplusplus
