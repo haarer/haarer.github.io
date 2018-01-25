@@ -1,4 +1,4 @@
-There was a question arduino.stackexchange about c++ and arduinos with some disouraging ansers. It made me want to share some of my good expieriences with c++ on embedded devices.
+Today, there was [a question on arduino.stackexchange about c++ and arduinos with some disouraging answers about using c++][5]. It made me want to share some of my good expieriences with c++ on embedded devices.
 
 C++ is fine with Arduinos or other AVR based Systems. I cant say much about pics, they have no decent gcc as far as i know.
 I've been using c++ for quite a while in a home automation project. It made the code much more readable and maintainable. 
@@ -114,3 +114,4 @@ My conclusion is, there is no excuse using c, except you havn't yet learned c++.
   [2]: https://haarer.github.io/c++/avr/templates/i/o/2018/01/21/c++-template-based-hardware-access-vs-classic-approach.html
   [3]: https://github.com/haarer/toolchain68k
   [4]: http://en.cppreference.com/w/cpp/language/auto
+  [5]: https://arduino.stackexchange.com/questions/49098/how-can-arduinos-8-bit-microcontrollers-handle-c/49113#49113
