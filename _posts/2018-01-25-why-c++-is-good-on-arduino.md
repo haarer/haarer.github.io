@@ -108,7 +108,14 @@ A good reason to upgrade the toolchain :)
 
 If you want to use a recent compiler (The Arduino IDE uses gcc4.9) you can [build your own gcc avr toolchain rather easily][3]. Then you have gcc 7.2 with c++17 support !
 
-My conclusion is, there is no excuse using c, except you havn't yet learned c++. 
+My conclusion is, there is no excuse using c, except you havn't yet learned using c++ without shooting youself in the foot. 
+
+**further reading**
+
+* [an interesting discussion about c++ on embedded systems](https://electronics.stackexchange.com/questions/3027/is-c-suitable-for-embedded-systems)
+* [wouters blog](https://www.voti.nl/blog/)
+
+
 
   [1]: http://www.avrfreaks.net/forum/c-new-delete-operator-confusion
   [2]: https://haarer.github.io/c++/avr/templates/i/o/2018/01/21/c++-template-based-hardware-access-vs-classic-approach.html
