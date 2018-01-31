@@ -1,10 +1,9 @@
 # How i set up eclipse to develop for my AVR embedded development
 
-## Which eclipse version to use
-I used neon for quite some time, but now switched to [oxygen][1]
+## Which Eclipse version to use
+I used neon for quite some time, but now switched to [oxygen][1]. It works fine.
 
 ## Install the avr eclipse plugin
-
 The archive (version 2.4.2) can be [downloaded here](https://sourceforge.net/projects/avr-eclipse/files/avr-eclipse%20stable%20release/)
 It is installed by adding the archive as an update site in eclipse (select "archive").
 
@@ -13,7 +12,7 @@ I did not try it.
 ![the old plugin](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-avr-plugin-eclipse-marketplace.png)
 
 ## Install and configure a toolchain
-I use my [build script][2] to compile a toolchain with the current gcc release 7.2
+I use my [build script][2] to compile a toolchain which uses the current gcc release 7.2.
 
 The tool chain is set up in the preferences dialog of eclipse
 * MSYS is installed to c:\tools\msys64
@@ -26,10 +25,53 @@ I copied the avr dude executeable and some dlls to a separate directory to avoid
 ![prefs dialog](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-avrdude2.png)
 
 ## Tools for modeling the system architecture
-
 Papyrus together with the SysML 1.4 plugin: [eclipse update site][3]
 
+## Set up an example project (bare metal blink on arduino mega)
+* from the menu bar select "File/New/C++ Project"
 
+* type a name, chose avr cross target and click finish.
+
+* in the new project, create a new c++ source file (right click the project, and then "new / source file").
+
+* type the following code, its a tiny blink for the arduino mega, which has the led on port b, bit 7.
+
+```
+extern "C"
+{
+	#include <avr/io.h>
+	#include <util/delay.h>
+}
+
+int main(void)
+{
+	DDRB |=  (1<<7);
+	while(1)
+	{
+		PORTB |= (1<<7);
+		_delay_ms(1000);
+		PORTB &= ~(1<<7);
+		_delay_ms(1000);
+	}
+}
+```
+* Now set up the project properties (right click on project, and then "properties").
+
+* In the dialog set up the target CPU and clock. This is needed to generate the code matching our CPU and to have the delay functions of the avr lib behave properly.
+![targetsettings](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-properties-target.png)
+
+* Set up the programmer to use. If this is your first project you'll have to set up a programmer using the new button. This opens a large dialog where you chose one of the programmer types known by avrdude. This works because you provided the path to the avrdude config file in the configuration step above. For this project use the **wiring** programmer type and chose the COM port that appears when the Arduino is plugged in.
+![targetsettings](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-properties-programmer.png)
+
+* Make the project generate a hex file because we want to have something to flash..
+![generate hex file](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-properties-generate-hex.png)
+
+* Set up the optimizations. for the avr lib delays an optimization needs to be enabled - chose one.
+![optimizations](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-properties-optimizations.png)
+
+* Build the code (right click project, and then "build project").
+
+* Flash the code into the Arduino. Click the "AVR" button in the tool bar, or right click the project and then "AVR/Upload Project to target device".
 
   [1]: https://www.eclipse.org/downloads/eclipse-packages/
   [2]: https://github.com/haarer/toolchain68k
