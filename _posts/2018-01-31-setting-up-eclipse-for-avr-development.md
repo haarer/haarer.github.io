@@ -7,8 +7,8 @@ I used neon for quite some time, but now switched to [oxygen][1]. It works fine.
 The archive (version 2.4.2) can be [downloaded here](https://sourceforge.net/projects/avr-eclipse/files/avr-eclipse%20stable%20release/)
 It is installed by adding the archive as an update site in eclipse (select "archive").
 
-There is also an avr-plugin available from the eclipse marketplace, but it is rather old (version 2.3.4).
-I did not try it.
+There is also an avr-plugin available from the eclipse marketplace, but it is rather old (version 2.3.4). I did not try if it works, too.
+
 ![the old plugin](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-avr-plugin-eclipse-marketplace.png)
 
 ## Install and configure a toolchain
@@ -22,6 +22,7 @@ The tool chain is set up in the preferences dialog of eclipse
 ![prefs dialog](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-avr-eclipse-preferences.png)
 
 I copied the avr dude executeable and some dlls to a separate directory to avoid setting search path to the dlls.
+
 ![prefs dialog](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-avrdude2.png)
 
 ## Tools for modeling the system architecture
@@ -58,15 +59,19 @@ int main(void)
 * Now set up the project properties (right click on project, and then "properties").
 
 * In the dialog set up the target CPU and clock. This is needed to generate the code matching our CPU and to have the delay functions of the avr lib behave properly.
+
 ![targetsettings](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-properties-target.png)
 
 * Set up the programmer to use. If this is your first project you'll have to set up a programmer using the new button. This opens a large dialog where you chose one of the programmer types known by avrdude. This works because you provided the path to the avrdude config file in the configuration step above. For this project use the **wiring** programmer type and chose the COM port that appears when the Arduino is plugged in.
+
 ![targetsettings](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-properties-programmer.png)
 
 * Make the project generate a hex file because we want to have something to flash..
+
 ![generate hex file](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-properties-generate-hex.png)
 
 * Set up the optimizations. for the avr lib delays an optimization needs to be enabled - chose one.
+
 ![optimizations](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-properties-optimizations.png)
 
 * Build the code (right click project, and then "build project").
