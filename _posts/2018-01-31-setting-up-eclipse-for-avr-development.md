@@ -17,13 +17,13 @@ I use my [build script][2] to compile a toolchain which uses the current gcc rel
 The tool chain is set up in the preferences dialog of eclipse
 * MSYS is installed to c:\tools\msys64
 * the toolchain is generated to /opt/crosschain inside MSYS
-* i use make from the [unxutils](http://unxutils.sourceforge.net/) package
+* i use make and other unix tools like rm from the toolchain
 
 ![prefs dialog](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-avr-eclipse-preferences.png)
 
-I copied the avr dude executeable and some dlls to a separate directory to avoid setting search path to the dlls.
+In order to make use of make, rm and avr dude from the tool chain it is necessary to set a path to the msys directory where the dlls reside. 
 
-![prefs dialog](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-avrdude2.png)
+![dll search path](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-environment-dll-path.png)
 
 ## Tools for modeling the system architecture
 Papyrus together with the SysML 1.4 plugin: [eclipse update site][3]
