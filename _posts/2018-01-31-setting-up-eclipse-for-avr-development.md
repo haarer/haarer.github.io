@@ -23,7 +23,11 @@ The tool chain is set up in the preferences dialog of eclipse
 
 In order to make use of make, rm and avr dude from the tool chain it is necessary to set a path to the msys directory where the dlls reside. 
 
-![dll search path](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-01-31-environment-dll-path.png)
+One way is to set the path before starting eclipse. This means total control over the used tools and dlls - the best way if the search path on the computer is polluted by various tool chains, mingw installations coming with tools like git and so on.
+
+```
+set PATH=C:\ProgramData\Oracle\Java\javapath;c:\tools\msys64\opt\crosschain\bin;c:\tools\msys64\mingw64\bin;c:\tools\msys64\usr\bin
+```
 
 ## Tools for modeling the system architecture
 Papyrus together with the SysML 1.4 plugin: [eclipse update site][3]
