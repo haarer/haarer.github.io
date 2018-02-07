@@ -33,9 +33,9 @@ set PATH=C:\ProgramData\Oracle\Java\javapath;c:\tools\msys64\opt\crosschain\bin;
 Papyrus together with the SysML 1.4 plugin: [eclipse update site][3]
 
 ## Set up an example project (bare metal blink on arduino mega)
-* from the menu bar select "File/New/C++ Project"
+* from the menu bar select "File/New/..." and then in the dialog open the folder C/C++ and select C++ Project and click next"
 
-* type a name, chose avr cross target and click finish.
+* type a name, chose avr cross target application and click finish.
 
 * in the new project, create a new c++ source file (right click the project, and then "new / source file").
 
