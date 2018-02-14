@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Why C++ is good on Arduino"
+categories: c++ avr templates i/o lambda arduino
+---
+
 Today, there was [a question on arduino.stackexchange about c++ and arduinos with some disouraging answers about using c++][5]. It made me want to share some of my good expieriences with c++ on embedded devices.
 
 C++ is fine with Arduinos or other AVR based Systems. I cant say much about pics, they have no decent gcc as far as i know.
