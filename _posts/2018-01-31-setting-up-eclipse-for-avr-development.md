@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "How i set up eclipse to develop for my AVR embedded development"
+date:   2018-01-31 10:30:55 +0100
+categories: eclipse avr toolchain
+---
 # How i set up eclipse to develop for my AVR embedded development
 
 ## Which Eclipse version to use
@@ -29,8 +35,6 @@ One way is to set the path before starting eclipse. This means total control ove
 set PATH=C:\ProgramData\Oracle\Java\javapath;c:\tools\msys64\opt\crosschain\bin;c:\tools\msys64\mingw64\bin;c:\tools\msys64\usr\bin
 ```
 
-## Tools for modeling the system architecture
-Papyrus together with the SysML 1.4 plugin: [eclipse update site][3]
 
 ## Set up an example project (bare metal blink on arduino mega)
 * from the menu bar select "File/New/..." and then in the dialog open the folder C/C++ and select C++ Project and click next"
@@ -84,4 +88,3 @@ int main(void)
 
   [1]: https://www.eclipse.org/downloads/eclipse-packages/
   [2]: https://github.com/haarer/toolchain68k
-  [3]: http://download.eclipse.org/modeling/mdt/papyrus/components/sysml14/
