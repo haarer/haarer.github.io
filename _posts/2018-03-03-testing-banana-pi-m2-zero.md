@@ -22,7 +22,7 @@ Well, i definitly could not buy a cable for this price and decided to buy [this 
 
 There are quite some images available for the Banana PI Zero, but there seems to be no "mainstream support" by any distribution.
 
-Their [download site][4]  seems to be some melting pot for various images from all kinds of sources.
+Their [image download section on their download site][4]  seems to be some melting pot for various images from all kinds of sources.
 
 The [armbian site][5] does list some H2+ based boards, but not the banana-pi-zero. [It seems the reason is the poor support by the manufacturer][6] - at least some of the posts in the armbian forum indicate that the manufacturer is either not willing or competent to provide correct information about their products. 
 
