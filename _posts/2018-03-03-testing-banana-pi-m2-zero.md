@@ -88,14 +88,14 @@ There we have our missing banana ;-)
 At this point i removed the SD Card from the banana and put into a card reader to copy the missing file from the image.
 I also diffed some of the boot files: 
 
- *  armbianEnv.txt had added **usbstoragequirks=0x2537:0x1066:u,0x2537:0x1068:u**
+ * armbianEnv.txt had added **usbstoragequirks=0x2537:0x1066:u,0x2537:0x1068:u**
  * the Kernel config exposed various differences - but it seems this has no effects.
 
 After unmounting the card and reinserting it into the banana-pi-zero, it booted again, and i could login using wifi again. 
 
 Clearly, this is not the fault of the armbian people. they just don't support the board for good reasons. 
 
-** Testing GPIO**
+**Testing GPIO**
 
 Now it is time to test GPIO. 
 
