@@ -128,6 +128,7 @@ I provided a file with only one line
 
 After this trick, the GPIO Library recognized the Board and i could toggle my LED
 
+    gpio mode 0 output
     gpio toggle 0
     
     
