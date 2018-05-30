@@ -4,7 +4,7 @@ title: "Install Eclipse and JDK on Debian"
 categories: eclipse,debian,java
 ---
 
-I had to set up a new development machine with Debian 8. 
+I had to set up a new development machine with Debian 9. 
 Debian hasn't the newest packages available - because they prefer stability.
 
 This is how i installed a current Eclipse and JDK (oxygen at time of writing and JDK8).
@@ -66,5 +66,5 @@ Create a symbolic link
 
 	sudo ln -s /opt/eclipse/eclipse /usr/bin/eclipse
 
-Now you should be able to ru eclipse from the 
+Now you should be able to run eclipse 
 
