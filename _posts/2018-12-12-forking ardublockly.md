@@ -6,7 +6,8 @@ categories: Arduino,Blockly
 
 [Ardublockly][1] is a great project - it brings blockly to the Arduino platforms.
 
-Unfortunatly it is not translated to German.  In order to make it available to my son, i wanted to add a translation to it. The excellent Documentation of the project makes this quite easy.
+Unfortunatly it is not translated to German.  In order to make it available to my son, i wanted to add a translation to it. The excellent Documentation of the project makes this quite easy. [The fork is here][3]
+
 
 **Adding a Language**
 
@@ -35,7 +36,7 @@ Note that the python modules are installed into the Python 3 Environment.
 **Building from Source**
 
 * cd blockly
-* <Python27 path>\python.exe build.py
+* \<Python27 path\>\python.exe build.py
 * cd ..
 * python package/build_pyinstaller.py
 * cd package\electron
@@ -49,16 +50,15 @@ Note that the python modules are installed into the Python 3 Environment.
 In order to test the new translation, the app has to be repacked. A complete rebuild is not necessary. This is done by a python script.
 
 * cd blockly
-* <Python27 path>\python.exe build.py
+* \<Python27 path\>\python.exe build.py
 
 The script must be called in a python 2.7 environment.
 
 After the script has run, it is necessary to clean the chromium cache - if this step is omitted, the changes are not visible.
 
-Just remove all files
-from *arduexec/appdata/Cache*.
-
+Just remove all files from *arduexec/appdata/Cache*.
 
 
   [1]: https://ardublockly.embeddedlog.com/
   [2]: https://github.com/carlosperate/ardublockly/wiki/Add-New-Language 
+  [3]: https://github.com/haarer/ardublockly
