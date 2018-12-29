@@ -36,7 +36,7 @@ For building Ardublockly from the source the following is needed:
   
 Note that the python modules are installed into the Python 3 Environment.
 
-**Obtaining the Source
+**Obtaining the Source**
 
 ```
 git clone https://github.com/haarer/ardublockly.git
