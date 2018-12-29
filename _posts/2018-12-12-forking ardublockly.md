@@ -11,6 +11,7 @@ Unfortunatly it is not translated to German.  In order to make it available to m
 I have also added blocks to control WS2812 color LED strips
 
 ![This is the result so far](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-12-12-Ardublockly.png)
+![The LED Strip](https://raw.github.com/haarer/haarer.github.io/master/_posts/2018-12-12-Ledstrip.jpg)
 
 **Adding a Language**
 
