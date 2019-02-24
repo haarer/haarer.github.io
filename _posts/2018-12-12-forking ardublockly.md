@@ -35,7 +35,12 @@ For building Ardublockly from the source the following is needed:
   * python module MKDocs
 * Node.js
   
-Note that the python modules are installed into the Python 3 Environment.
+Note that the 
+* python modules are installed into the Python 3 Environment.
+* under Linux the modules must be installed into the system, not locally for the user
+```
+sudo pip3 install pyinstaller mkdocs
+```
 
 **Obtaining the Source**
 
