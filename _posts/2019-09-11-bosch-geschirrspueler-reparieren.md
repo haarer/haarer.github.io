@@ -35,13 +35,129 @@ Was auch sehr geholfen hat, war ein Rollbrett auf dem ich den GSP leicht durch d
 
 Nachdem der Geschirrspüler aus der Küche rausgezogen und abgekabelt / abgenabelt ist, entfernt man erst mal die Seitenwände - die sind nur mit jeweils 2 Torxschrauben vorn rechts und links befestigt.
 
-![Rechte Seitenwand ab](https://raw.github.com/haarer/haarer.github.io/master/_posts\IMG_20190825_094334022.jpg)
+![Rechte Seitenwand ab](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_094334022.jpg)
 
 Dann kann man auf der rechten Seite schon den Pumpenmotor sehen. Die Ablagerungen unter dem Motor deuten auf ausgetretenes Wasser hin, aber es war nicht so viel, daß es den Wassersensor ausgelöst hätte.
-![Motor und Sauerei](https://raw.github.com/haarer/haarer.github.io/master/_posts\IMG_20190824_222737671.jpg)
+
+![Motor und Sauerei](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190824_222737671.jpg)
+
+Um den Motor ausbauen zu können muß man übrigens **nicht** die Tür ausbauen, wie das an anderer Stelle im Netz beschrieben ist. 
+
+Man kommt an den Motor heran, indem man den oberen Maschinenteil (die Blechkiste) vom unteren Maschinenteil (die weiße Plastikbox) trennt. Dazu muß man zunächst im Spülraum unten die Siebe und Abdeckungen entfernen.
+
+Außerdem müssen der Deckel des Salzbehälters und die darunter sichtbare Plastikmutter entfernt werden.
+
+![Spülraum](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_100428356_HDR.jpg)
+ 
+ Erst dann kommt man an die Schrauben, die den unteren Spülarm halten (2x Torx) und die Schrauben die die Edelstahlwanne an die Dichtung des Pumpensumpfes pressen. Die 4 Schrauben entfernen, und den Spülarmhalter aus der oberen Halterung herausklipsen.
+
+ Ich habe die Abdeckung des Flügelrads der Abwasserpumpe auch entfernt um das Restwasser besser absaugen zu können. Ein Kontrolle auf Fremdkörper schadet auch nicht.
+
+![Pumpensumpf](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_100607370.jpg)
+
+Auf der linken Seite der Maschine muß nun die "Wassertasche" entfernt werden. Dazu löst man die Schrauben an den Blechhaltern die die Wassertasche an die Maschinenwand anpressen und schiebt die Halter dann seitlich weg. Dann muß man die Plastiklötze (oben links und rechts im nachfolgenden Bild) entfernen. Beim 
+Linken geht das mit einer Schraube, beim Rechten muß man einen Blechstreifen aufbiegen.
+
+Bevor man weiter macht, sollte man darauf gefaßt sein, daß alles Wasser was noch in der Wassertasche ist, rausläuft. Je nach dem in welchem Zustand man die Maschine ausgeschaltet hat ist sie möglicherweise randvoll :)
+
+Nun müssen die drei Schläuche unten links gelöst werden. Dazu zunächst den schwarzen Sicherungsclip zwischen dem Entlüftungschlauch (links und dem Abwasserschlauch (Mitte) entfernen. Dann kann man Entlüftungsschlauch und Abwasserschlauch nach unten abziehen. 
+
+Um den Zulaufschlauch zu lösen, drückt man die Metallklemme mit einer Kombizange zusammen und schiebt sie nach unten. Den Schlauch kriegt man schwer ab, aber mit etwas Seifenlauge und Drehbewegungen mit der Zange geht's.
+
+Nun läuft das Wasser was noch in der Wassertasche ist raus - man kann den Ablaufschlauch schnell drunter halten.
+
+Nun zieht man die die Wassertasche etwas nach vorn (klebt ein wenig) und dann nach oben raus. 
+
+Man sollte die Wassertasche vorsichtig behandeln - auf der Vorderseite ist sie aus dickem Plastik, aber die Rückseite ist eine dünne Folie. Wenn man sie kaputt macht - 80€. Mir ist sie kaputt gegangen als ich sie sauber machen wollte und einen Duschschlauch daran gehalten hatte um sie durchzuspülen.
+
+![Wassertasche](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_101802886.jpg)
+
+So sieht die linke Maschinenseite ohne Wassertasche aus.
+![Ohne Wassertasche](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_110354507.jpg)
+
+Als nächstes wird das Gebergehäuse ausgebaut. Im folgenden Bild ist es mit noch eingebauter Wassertasche zu sehen. Die Wassertasche sowie das Gebergehäuse stecken in dem Plastikteil auf dem die Nummern 1 und 2 stehen. Ich habe die Steckerpositionen mit Nummern gekennzeichnet, damit man sie später wieder richtig zusammen stecken kann.
+
+Man muß zunächst die Stecker von den Mikroschaltern (oben Rechts) abziehen, und den unten rechts hinter dem roten Plastikstößel sichtbaren Schlauch abziehen.
+
+Das Gebergehäuse ist unten "eingerastet", wenn man mit einem Schraubendreher die Rastung löst kann man das Gebergehäuse nach oben herausziehen.
+
+![Gebergehäuse](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_103155426.jpg)
+
+Wenn das Gebergehäuse so verdreckt ist wie hier, sollte man es reinigen. Man kann die Mikroschalter abbauen und das Gehäuse in warmes Wasser mit einem Spülmaschinentab einlegen.
+
+![Gebergehäuse2](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_130741726.jpg)
 
 
+Nun geht es daran die letzten Verbindungen zwischen Unterteil und Oberteil der Maschine zu lösen. Dazu weden zunächst die Plastikabdeckungen der Türseilhaken rechts und links entfernt, und die Türseile ausgehängt. (ist im nächsten Bild schon geschehen)
 
+Das geht nur bei geschlossener Tür - sonst sind die Federn zu stark gespannt.
+
+**Achtung, wenn man die Tür nun aufmacht, fällt sie runter.**
+
+![Türseil aushängen rechts ](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_111615715.jpg)
+
+Und auf der anderen Seite..
+
+![Türseil aushängen links ](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190831_125241759.jpg)
+
+Nun - endlich - kann man die vier Schrauben lösen, die Unterteil und Oberteil noch verbinden.
+
+Nun kann man das Oberteil ein Stück hochziehen - wenn man gerade keinen Helfer zur Hand hat, geht's auch mit Trick :)
+
+![Ohne Worte..](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_124206068.jpg)
+
+Wenn man das Oberteil ein Stück angehoben hat, dann kann man die Seilrolle abbauen. Dazu muß sie ein Stück nach hinten verdreht werden:
+
+![Seilrolle](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190831_124115946.jpg)
+
+Dann kann man sie aushängen:
+
+![Seilrolle ausgehängt](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190831_124053337.jpg)
+
+
+Als nächstes zieht man alle Stecker des Kabelbaums der von der Tür kommt ab. Natürlich nicht, ohne vorher ein Foto zu machen, damit man alles wieder richtig zusammen steckt. Das Ziel ist, daß der von der Tür kommende Kabelbaum frei ist, und nicht mehr mit dem unteren Maschinenteil verbunden ist.
+
+![Kabelbaum ab](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190831_123331150.jpg)
+
+Wenn man den Netzanschluß **vorher** ausgebaut hätte ginge es etwas einfacher..
+
+![Netzanschluß ab](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190831_122950827.jpg)
+
+Soooo.. nun liegt das Unterteil frei vor mir. Eine gute Gelegenheit die Dichtungen zwischen Edelstahlgehäuse und Unterteil zu reinigen. Dann habe ich noch ein wenig Vaseline draufgeschmiert, damit sie leichter wieder reingehen.
+
+![Unterteil frei](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_125451337.jpg)
+
+Nun wird die Hauptpumpe ausgebaut. Pumpe und Motor sind auf der Druckseite mit einer Gummitülle verbunden, die mit einer Klemmschelle gesichert ist. Diese kann nicht wieder verwendet werden und muß vorsichtig entfernt werden, so daß die Gummitülle nicht beschädigt wird.
+
+![Hauptpumpe](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_132608931.jpg)
+
+Auf der Saugseite ist die Pumpe in eine Dichtung im Pumpensumpf gesteckt.
+
+Nun kann man die Laschen mit denen der Motor am Untergehäuse befestigt ist aushängen, und Pumpe sowie Motor mit einer Drehbewegung aus den Gummitüllen lösen. Die restlichen Kabelschuhe lösen.
+
+Man kann übrigens den Pumpensumpf mitsamt Hauptpumpe aus dem Unterteil herausnehmen, wie man auf dem nächsten Bild sieht.
+
+![Hauptpumpe raus](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_143450731_HDR.jpg)
+
+Dazu muß man ein paar Kabel mehr lösen. Für den Tausch des Motors bzw. der Dichtung ist das nicht nötig, ich habe es aber gemacht, weil ich das Untergehäuse reinigen wollte. Das sah nämlich so aus:
+
+![Untergehäuse](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_133654619.jpg)
+
+Nachdem Motor und Pumpe nun ausgebaut sind, habe ich diese zerlegt. Hier sieht man schon an der Verkrustung des Motors, daß über eine längeren Zeitraum kleine Wassermengen ausgetreten sind. Offensichtlich so wenig, daß es schnell genug verdunstet ist, und nicht den Wasserstandssensor ausgelöst hat.
+
+Aber eben so viel, daß das pumpenseitige Lager vergammelt ist.
+
+Der Motor machte auch ein sehr unschönes Geräusch wenn man die Welle gedreht hat. Da er aber noch lief, wollte ich zunächst versuchen ein Lager zu tauschen.
+
+![Motorzerlegt](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_150208814.jpg)
+
+Also ab in die Werkstatt. Der Motor ist - nach einer Behandlung mit WD40 leicht zu zerlegen und das pumpenseitige Lager wie erwartet völlig vergammelt.
+
+![Motornochmehrzerlegt](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_161341702.jpg)
+
+Das Lager ist ein "Allerweltslager" 608zz 
+
+![Lager](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_174435930.jpg)
 
 Die entgültige Entscheidung für die Reparatur ist also gefallen.
 
@@ -60,22 +176,3 @@ Außerdem noch ein [Geschirrkorb-Set][5] als Ersatz für die vergammelten.
   [4]: https://shop.ersatzteil-land.de/ersatzteilland-p2178h3s168-Bosch-Siemens-Waerme.html
   [5]: https://shop.ersatzteil-land.de/ersatzteilland-p2739h3s328-Bosch-Siemens-SET-Ge.html
 
- 
-
-Leider ist es nicht möglich, alle Geräte in die Gerätelisten einzupflegen, da es viel zu viele Geräte gibt.
-
- 
-
-Unabhängig davon sind die angefragten Ersatzteile für das Gerät passend. Bestellen können Sie diese unter folgendem Link:
-
- 
-
- 
-
-Gerne kann ich die Kritik bezüglich des Kontaktformulars weiterleiten. Sie können auch gerne unseren „neuen Onlineshop“ benutzen:
-
- 
-
-https://b2c.ersatzteil-land.de/
-
- 
