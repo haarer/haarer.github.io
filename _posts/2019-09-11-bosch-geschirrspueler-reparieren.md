@@ -26,7 +26,7 @@ Eine Recherche über die vermutlich auszutauschenden Teile im Netz - dickes Lob 
 
 **Auseinander bauen**
 
-Man braucht dazu kein Spezialwerkzeug, eine Wasserpumpenzange, eine Kombizange und ein Torx Bitsatz reichen aus. Auf jeden Fall sollte man Putzlappen oder Handtücher bereit haben, weil der Geschirrspüler noch Wasser enthält was irgend wann doch rausläuft und weil es viele versiffte stellen gibt, die sauber gemacht werden wollen. Ein Kanister, ein stück Aquariumschlauch und eine Einwegspritze helfen sehr dabei Wasserreste aus der Maschine zu holen, damit es nicht zu sehr plörrt. 
+Man braucht dazu kein Spezialwerkzeug, eine Wasserpumpenzange, eine Kombizange und ein Torx Bitsatz reichen aus. Auf jeden Fall sollte man Putzlappen oder Handtücher bereit haben. Der Geschirrspüler enthält noch etwas Wasser, welches irgendwann doch rausläuft. Außerdem gibt es viele versiffte Stellen, die sauber gemacht werden wollen. Ein Kanister, ein Stück Aquariumschlauch und eine Einwegspritze helfen sehr dabei, Wasserreste aus der Maschine zu holen, damit es nicht zu sehr plörrt. 
 
 Oder man macht das Ganze draußen und läßt einfach laufen :)
 Ich hab das Ding in der Küche mit dem "guten Holzfußboden" auseinander gebaut und war entsprechend vorsichtig.
@@ -37,8 +37,9 @@ Nachdem der Geschirrspüler aus der Küche rausgezogen und abgekabelt / abgenabe
 
 ![Rechte Seitenwand ab](https://raw.github.com/haarer/haarer.github.io/master/_posts\IMG_20190825_094334022.jpg)
 
-Dann kann man auf der rechten Seite schon den Pumpenmotor sehen.
+Dann kann man auf der rechten Seite schon den Pumpenmotor sehen. Die Ablagerungen unter dem Motor deuten auf ausgetretenes Wasser hin, aber es war nicht so viel, daß es den Wassersensor ausgelöst hätte.
 ![Motor und Sauerei](https://raw.github.com/haarer/haarer.github.io/master/_posts\IMG_20190824_222737671.jpg)
+
 
 
 
