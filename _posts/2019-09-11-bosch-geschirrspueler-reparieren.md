@@ -12,6 +12,8 @@ Seit einiger Zeit machte unsere Spülmaschine komische sägende Geräusche - une
 
 Da das Ding schon seit über 10 Jahren seinen Dienst tut, haben wir auch über einen Neukauf nachgedacht. Die Beschichtung der Geschirrkörbe ist an einigen Stellen ab und es zeigen sich Roststellen. Eine Reparatur (2012, Motorkondensator an der Hauptpumpe defekt) hat der GSP auch schon hinter sich.  Da ein neuer vergleichbarer dann aber ca.800€ kosten würde, lohnt sich  wahrscheinlich ein Reparaturversuch.
 
+**Dazu noch ein paar warnende Worte: Die hier beschriebenen Abläufe sind keine Garantie dafür, daß die Geschirrspülmaschine danach sicher betrieben werden kann. Die beschriebenen Arbeiten dürfen nur von einer Elektrofachkraft ausgeführt werden. Also: wer's versaut hat selbst schuld.**
+
 Damit man überhaupt vernünftige Informationen findet, braucht man die sogenannte E-Nummer. Bei meinem GSP ist sie in das Nirosta-Blech oben in der Tür eingeätzt. Man kann sie kaum lesen, aber wenn man mit Bleistift darüber reibt, wird die Schrift sichtbar:
 
 
@@ -19,8 +21,8 @@ Damit man überhaupt vernünftige Informationen findet, braucht man die sogenann
 Der Geschirrspüler ist also ein *SGI55M45EU/70*
 
 Eine Recherche über die vermutlich auszutauschenden Teile im Netz - dickes Lob an das [Bosch Service Portal][1] - und ein Telefonat mit einem sehr netten Ersatzteilhändler ergaben folgendes:
- *  schlimmstenfalls müssen ein Dichtsatz und ein neuer Pumpenmotor her insgesamt ca. 250€
- *  mit etwas Glück nur werden ein Dichtsatz und neue Lager gebraucht ca. 50€.
+ *  schlimmstenfalls müssen ein Dichtsatz und ein neuer Pumpenmotor her :insgesamt ca. 220€
+ *  mit etwas Glück werden nur ein Dichtsatz und neue Lager gebraucht:  ca. 40€.
  
  Also auseinander bauen und schauen was Sache ist.
 
@@ -151,11 +153,12 @@ Der Motor machte auch ein sehr unschönes Geräusch wenn man die Welle gedreht h
 
 ![Motorzerlegt](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_150208814.jpg)
 
-Also ab in die Werkstatt. Der Motor ist - nach einer Behandlung mit WD40 leicht zu zerlegen und das pumpenseitige Lager wie erwartet völlig vergammelt.
+Also ab in die Werkstatt. Der Motor war - nach einer Behandlung mit WD40 - leicht zu zerlegen und das pumpenseitige Lager wie erwartet völlig vergammelt.
+Hierzu soll noch gesagt werden, daß der Lagertausch vielleicht nicht jedermanns Sache ist, aber zur not findet man im Bekanntenkreis jemanden der jemand kennt der das kann.  
 
 ![Motornochmehrzerlegt](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_161341702.jpg)
 
-Das Lager ist ein "Allerweltslager" 608zz 
+Das Lager ist ein "Allerweltslager" 608z 
 
 ![Lager](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190825_174435930.jpg)
 
@@ -165,7 +168,53 @@ Die entgültige Entscheidung für die Reparatur ist also gefallen.
 
 Die Teile habe ich dann letztlich bei [ersatzteil-land.de][2] bestellt. 
 Einen [Dichtsatz][3] und, weil ich sie dusseligerweise beim sauber machen kaputt gemacht habe, ein [Wärmetauscher alias "Wassertasche"][4].
-Außerdem noch ein [Geschirrkorb-Set][5] als Ersatz für die vergammelten.
+Außerdem noch ein [Geschirrkorb-Set][5] als Ersatz für die vergammelten alten Geschirrkörbe.
+
+Ich war mit dem Lieferanten hochzufrieden, er hat auf Nachfrage noch mal die Kompatibilität der Teile mit der Maschine bestätigt, schnell geliefert und der Preis war auch günstiger als bei anderen.
+
+**Alles wieder zusammen bauen**
+
+Nachdem ich den Motor gründlich gereinigt hatte habe ich das neue Lager ein- und den Motor wieder zusammen gebaut. Danach lief er wieder leise.
+
+Der Zusammenbau der Maschine erfolgte (wie sonst ?) in umgekehrter Reihenfolge.
+Dabei gibt es ein paar Dinge zu beachten.
+
+ * Funktion und Kabelführung beim Wasserstandsensor
+ * Korrekter und vollständiger Anschluss der Schutzerde
+
+Beides sind Sicherheitseinrichtungen in der Maschine und beiden ist gemeinsam, daß man zunächst nicht merkt wenn sie nicht funktionieren. Wenn es denn aber zum Fehlerfall kommt sind die Folgen gravierend.
+
+Der Wasserstandsensor dient dazu, die Maschine abzuschalten, bzw. das Abpumpen einzuleiten wenn irgendwas undicht wird. Dazu ist ein Schwimmkörper vorhanden, der über ein Hebelwerk einen Schalter betätigt. Wenn man hier etwas vergißt, oder falsch macht, funktioniert die Sicherheitsabschaltung nicht. Dann steht möglicherweise eines Tages die Bude unter Wasser.
+
+Der Schutzleiter ist für die Funktion der Maschine nicht relevant, sondern ist dafür da, daß im Fehlerfall der Strom abgeschaltet werden kann. Wenn der Schutzleiter nicht richtig angeschlossen ist, steht im Fehlerfall möglicherweise das Maschinengehäuse unter Netzspannung - das kann tödlich sein.
+
+Auf dem folgenden Bild sieht man Teile des Wassersensors:
+ * der Styroporschwimmer wird durch Wasser in der Maschine nach oben gedrückt
+ * die graue Wippe unten überträgt die Bewegung des Schwimmers auf den Stößel
+ * der rote Stößel links betätigt einen Mikroschalter im Gebergehäuse
+ * der Kabelbaum ist noch nicht in der richtigen Position, so könnte er die Bewegung stören.
+ 
+![Wassersensor](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190831_121726308.jpg)
+
+Auf dem folgenden Bild ist der Kabelbaum richtig befestigt:
+
+![Wassersensor richtig](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190831_125241759.jpg)
+
+
+**Was kann man noch falsch machen ?**
+
+Z.B. Folgendes : Nachdem ich die Maschine wieder zusammengebaut habe, ist mir beim Test aufgefallen, daß der Pumpenmotor recht heiß wurde.
+Die Pumpe lief auch ziemlich schwergängig. Ich hatte erst gedacht, daß die Dichtung erst einlaufen muß (Graphit / Keramik),
+
+Letztlich habe ich feststellen müssen, daß ich beim zusammenbau von Pumpe und Motor einen Abstandhalter verbummelt hatte. Er war mir beim Test des Motors runtergefallen und lag noch in der Werkstatt.
+
+![Abstandhalter](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20190831_164942012.jpg)
+
+Der Abstandhalter ist dafür da, daß auf die Pumpendichtung gerade der richigen Druck ausgeübt wird.
+
+Also alles wieder auseinander gebaut, Abstandshalter rein und wieder alles zusammengebaut.. 
+.. nun läufts super.
+
 
 
 
