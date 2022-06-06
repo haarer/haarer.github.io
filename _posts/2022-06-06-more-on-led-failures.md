@@ -13,6 +13,7 @@ All are GU10 Socket type (230 V AC) used in metal case outdoor fixtures in a bon
 The outside lights are on from dusk till dawn - that means an on time of 4200 hours per year. They should last more than 3 years.
 
 **The bad bunch**
+
 Today i took the time to crack open the six LEDs that failed this year.
 ![2022 LED fail collection](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20220606_163206906.jpg)
 
@@ -27,6 +28,7 @@ They brands are
 **Fun Fact #2**: No product data is available on the web for any of the LEDs - except for the Hornbach type which still can be [shopped](https://www.hornbach.de/shop/3x-LED-Reflektorlampe-PAR16-GU10-4-8W50W-345-lm-2700-K-warmweiss-3-Stueck/6251295/artikel.html).
 
 **Possible Reasons for Failure**
+
 There are some possible reasons for failure with increasing probability
  * bad components 
  * moisture and subsequent short circuit
@@ -42,6 +44,7 @@ All the short lived ( lasting a year) LEDs of this batch had a glass case. Glass
 The 5 years living VTAC had a plastic coated aluminum case with the LED board thermoglued to the case. By far the best thermal design of the six.
 
 But lets start with the worst:
+
 **OSRAM**
 ![OSRAM](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20220606_165520730.jpg)
 ![OSRAM2](https://raw.github.com/haarer/haarer.github.io/master/_posts/IMG_20220606_165548390.jpg)
